@@ -7,6 +7,15 @@ export default function Home() {
         <h1>Welcome to Nextjs Course 2024</h1>
         <Link href={"/products"}>Navigate to products page</Link>
         <Link href={"/accounts"}>Navigate to accounts page</Link>
+        <Link href={"/products/[details]"} as="/products/123">
+          Dynamic Route
+        </Link>
+        <Link
+          href={"/products/[..product-review]"}
+          as="/products/123/51212/563213"
+        >
+          Nested Dynamic Route
+        </Link>
       </main>
     </div>
   );
