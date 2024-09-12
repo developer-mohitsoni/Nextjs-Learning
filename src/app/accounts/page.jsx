@@ -6,7 +6,7 @@ export default function Accounts() {
   const userProfileInfo = null;
 
   if (userProfileInfo === null) {
-    redirect("profile");
+    redirect("cart?search=product1&randomvalue=abcde");
   }
   return <h1>Accounts</h1>;
 }
