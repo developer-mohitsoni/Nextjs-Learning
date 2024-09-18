@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const fetchListOfUsers = async () => {
   try {
     const apiResponse = await fetch("https://dummyjson.com/users", {
@@ -19,12 +21,18 @@ const ServerSideDataFetching = async () => {
 
   return (
     <>
-      <div>
-        <h1>Server Side Data Fetching</h1>
+      <div className="p-10">
+        <h1>Server Side Data Fetching : User List Page</h1>
         <ul>
           {listOfUsers && listOfUsers.length > 0
             ? listOfUsers.map((user) => {
-                return <li>{user.firstName}</li>;
+                return (
+                  <li className="mt-5 cursor-pointer">
+                    <Link href={`/server-data-fetch/${user.id}`}>
+                      {user.firstName}
+                    </Link>
+                  </li>
+                );
               })
             : null}
         </ul>
