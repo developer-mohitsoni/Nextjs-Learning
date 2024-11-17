@@ -54,12 +54,10 @@ export default function ClientSideDataFetching() {
         <h1>Client Side Data Fetching</h1>
         <ul>
           {data && data?.users && data?.users.length > 0
-            ? data?.users.map((user) => {
+            ? users.map((user) => {
                 return (
-                  <li className="mt-5 cursor-pointer">
-                    <Link href={`/server-data-fetch/${user.id}`}>
-                      {user.firstName}
-                    </Link>
+                  <li key={user.id} className="mt-5 cursor-pointer">
+                    {user.firstName}
                   </li>
                 );
               })
