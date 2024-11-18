@@ -13,13 +13,13 @@ export default function RecipeList({ recipeList }) {
                 <Link href={`/recipe-list/${recipe.id}`} key={recipe.id}>
                   <Card>
                     <CardContent className="bg-white rounded-md overflow-hidden shadow-md cursor-pointer hover:scale-[1.1] transition-all">
-                      <disv className="w-full aspect-w-16 aspect-h-8 lg:h-80">
+                      <div className="w-full aspect-w-16 aspect-h-8 lg:h-80">
                         <img
                           src={recipe.image}
                           alt={recipe.name}
                           className="h-full w-full object-cover object-top"
                         />
-                      </disv>
+                      </div>
                       <div className="p-6">
                         <h3 className="text-lg font-bold text-gray-900">
                           {recipe.name}
