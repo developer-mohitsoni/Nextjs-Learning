@@ -11,16 +11,16 @@ export default function RecipeList({ recipeList }) {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {recipeList && recipeList.length > 0
             ? recipeList.map((recipe) => (
-                <Link href={`/recipe-list/${recipe.id}`}>
+                <Link href={`/recipe-list/${recipe.id}`} key={recipe.id}>
                   <Card>
                     <CardContent className="bg-white rounded-md overflow-hidden shadow-md cursor-pointer hover:scale-[1.1] transition-all">
-                      <div className="w-full aspect-w-16 aspect-h-8 lg:h-80">
+                      <disv className="w-full aspect-w-16 aspect-h-8 lg:h-80">
                         <img
                           src={recipe.image}
                           alt={recipe.name}
                           className="h-full w-full object-cover object-top"
                         />
-                      </div>
+                      </disv>
                       <div className="p-6">
                         <h3 className="text-lg font-bold text-gray-900">
                           {recipe.name}
