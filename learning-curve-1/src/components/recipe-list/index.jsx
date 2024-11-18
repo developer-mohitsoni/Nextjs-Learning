@@ -2,8 +2,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import Link from "next/link";
 
 export default function RecipeList({ recipeList }) {
-  console.log(recipeList);
-
   return (
     <div>
       <div className="p-4 mx-auto lg:max-w-6xl md:max-w-4xl sm:max-w-full">
